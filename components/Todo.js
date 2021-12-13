@@ -6,7 +6,7 @@ import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../firebase";
 import { useContext } from "react";
 import { useRouter } from "next/router";
-import { TodoContext } from "../pages/TodoContext";
+import { TodoContext } from "../TodoContext";
 
 const Todo = ({ id, timestamp, title, detail }) => {
   const { showAlert, setTodo } = useContext(TodoContext);
