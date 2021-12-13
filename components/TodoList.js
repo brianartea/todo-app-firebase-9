@@ -10,9 +10,15 @@ import { useAuth } from "../Auth";
 import { db } from "../firebase";
 import Todo from "./Todo";
 
-const TodoList = () => {
+const TodoList = ({ todosProps }) => {
   const [todos, setTodos] = useState([]);
+  // Get curent user info
   const { currentUser } = useAuth();
+
+  useEffect(() => {
+    setTodos(JSON.parse(todosProps));
+  }, []);
+
   useEffect(() => {
     const collectionRef = collection(db, "todos");
 

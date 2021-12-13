@@ -50,20 +50,20 @@ const TodoForm = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const checkIfClickedOutside = (e) => {
-  //     if (!inputAreaRef.current.contains(e.target)) {
-  //       console.log("Outside input area");
-  //       setTodo({ title: "", detail: "" });
-  //     } else {
-  //       console.log("Inside input area");
-  //     }
-  //   };
-  //   document.addEventListener("mousedown", checkIfClickedOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", checkIfClickedOutside);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (!inputAreaRef.current.contains(e.target)) {
+        console.log("Outside input area");
+        setTodo({ title: "", detail: "" });
+      } else {
+        console.log("Inside input area");
+      }
+    };
+    document.addEventListener("mousedown", checkIfClickedOutside);
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, []);
 
   return (
     <div ref={inputAreaRef}>
