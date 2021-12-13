@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.center {
+  text-align: center;
+  color: #b4b4b4;
+  font-weight: 400;
+}

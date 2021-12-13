@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
     });
   }, []);
   if (loading) {
-    return <Loading type="bubbles" color="yellowgreen" />;
+    return <Loading type="bubbles" color="blue" />;
   }
   if (!currentUser) {
     return <Login />;
