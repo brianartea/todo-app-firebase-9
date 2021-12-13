@@ -14,7 +14,7 @@ import TodoForm from "../components/TodoForm";
 //import Head from 'next/head'
 import TodoList from "../components/TodoList";
 import { auth, db } from "../firebase";
-import { TodoContext } from "../TodoContext";
+import { TodoContext } from "../components/TodoContext";
 import { verifyIdToken } from "../firebaseAdmin";
 import nookies from "nookies";
 

@@ -9,7 +9,7 @@ import {
 import { useContext, useEffect, useRef } from "react";
 import { useAuth } from "../Auth";
 import { db } from "../firebase";
-import { TodoContext } from "../TodoContext";
+import { TodoContext } from "./TodoContext";
 
 const TodoForm = () => {
   const inputAreaRef = useRef();
